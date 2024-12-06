@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Augmented Chess</title>
+    <script type="text/javascript" src="libs/Three.js"></script>
+    <script type="text/javascript" src="libs/aruco.js"></script>
+    <script type="text/javascript" src="libs/cv.js"></script>
+    <script type="text/javascript" src="helper/ColladaLoader.js"></script>
+    <script type="text/javascript" src="helper/posit.js"></script>
+    <script type="text/javascript" src="helper/svd.js"></script>
+    <script type="text/javascript" src="constants.js"></script>
+
+    <script type="text/javascript" src="pieces/Board.js"></script>
+    <script type="text/javascript" src="pieces/Piece.js"></script>
+    <script type="text/javascript" src="pieces/Bishop.js"></script>
+    <script type="text/javascript" src="pieces/King.js"></script>
+    <script type="text/javascript" src="pieces/Knight.js"></script>
+    <script type="text/javascript" src="pieces/Pawn.js"></script>
+    <script type="text/javascript" src="pieces/Queen.js"></script>
+    <script type="text/javascript" src="pieces/Rook.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="ChessBoard.js"></script>
+</head>
+<body style="text-align: center; font-family: monospace;">
+    <video id="video" width="auto" height="auto" autoplay="true" style="display:none;"></video>
+
+    <div style="margin: 10px;"><strong>-= Augmented Chess Game =-</strong></div>
+    <div style="width: 100%;">
+        <div style="width: 1280px; margin-left:auto; margin-right:auto;">
+
+            <canvas id="canvas" style="width: 1280px; height: 960px; float: left; border: solid 1px black;"></canvas>
+
+            <div id="container" style="width: 1280px; height: 960px; float: left; border: solid 1px black; background: green;"></div>
+
+        </div>
+    </div>
+    <div id="controller" >
+        <div>GAME CONTROLLER</div>
+        <div>Choose Piece -- x:<input id="x" type="text" name="x" style="width:30px;" placeholder="1-8"> y:<input id="y" type="text" name="y" style="width:30px;" placeholder="1-8"></div>
+        <button type="button" onclick="choosePiece()">OK</button>
+        <div id="posList">
+        </div>
+    </div>
+</body>
+</html>
